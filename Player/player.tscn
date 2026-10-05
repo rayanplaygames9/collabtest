@@ -49,6 +49,7 @@ script = ExtResource("1_btcbx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1314174637]
 sprite_frames = SubResource("SpriteFrames_tapir")
 animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1377542920]
 position = Vector2(0, 5)
