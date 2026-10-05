@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var respawn_timer: Timer = $RespawnTimer
 
-const SPEED = 200.0
+const SPEED = 150.7
 const JUMP_VELOCITY = -350.2
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -39,3 +40,9 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("jump")
 
 	move_and_slide()
+	
+func respawn():
+	position = Vector2.ZERO
+
+func _on_respawn_timer_timeout() -> void:
+	respawn()
