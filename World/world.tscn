@@ -157,8 +157,6 @@ texture = ExtResource("1_62w18")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8a836")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tapir"]
-
 [node name="World" type="Node2D" unique_id=987652548]
 script = ExtResource("1_3f78f")
 
@@ -169,9 +167,6 @@ tile_set = SubResource("TileSet_tapir")
 [node name="Player" parent="." unique_id=2089822870 instance=ExtResource("2_8a836")]
 
 [node name="Killzone" parent="." unique_id=2048570844 instance=ExtResource("3_j8job")]
-position = Vector2(0, 238)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1404328559]
-shape = SubResource("WorldBoundaryShape2D_tapir")
+position = Vector2(0, 262)
 
 [connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]
