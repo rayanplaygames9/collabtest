@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c8nmw051luyj2" path="res://Player/player.gd" id="1_btcbx"]
 [ext_resource type="Texture2D" uid="uid://cc7m60367kk4e" path="res://assets/sprites/knight.png" id="1_l8h54"]
-[ext_resource type="Texture2D" uid="uid://42uq14qgnn0" path="res://icon.svg" id="2_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://4r72260fdvto" path="res://assets/kenney_ui-pack/PNG/Blue/Default/arrow_basic_w.png" id="3_k53q1"]
+[ext_resource type="Texture2D" uid="uid://bh1vrya4rsuvq" path="res://assets/kenney_ui-pack/PNG/Blue/Default/arrow_basic_e.png" id="4_fhl08"]
+[ext_resource type="Texture2D" uid="uid://dshi5f3hmxg33" path="res://assets/kenney_ui-pack/PNG/Blue/Default/arrow_basic_n.png" id="5_vtle1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ntmi"]
 atlas = ExtResource("1_l8h54")
@@ -58,22 +60,22 @@ shape = SubResource("CircleShape2D_fhl08")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=152108471]
 zoom = Vector2(4, 4)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=713983141]
+[node name="UI" type="CanvasLayer" parent="." unique_id=713983141]
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer" unique_id=1292324141]
+[node name="LeftButton" type="TouchScreenButton" parent="UI" unique_id=1292324141]
 position = Vector2(52.999996, 432.99997)
-scale = Vector2(0.90625, 0.8984377)
-texture_normal = ExtResource("2_4ntmi")
+scale = Vector2(4, 4)
+texture_normal = ExtResource("3_k53q1")
 action = "ui_left"
 
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer" unique_id=2130816353]
-position = Vector2(246, 431)
-scale = Vector2(0.9609374, 0.9218751)
-texture_normal = ExtResource("2_4ntmi")
+[node name="RightButton" type="TouchScreenButton" parent="UI" unique_id=643924327]
+position = Vector2(261, 433)
+scale = Vector2(4, 4)
+texture_normal = ExtResource("4_fhl08")
 action = "ui_right"
 
-[node name="TouchScreenButton3" type="TouchScreenButton" parent="CanvasLayer" unique_id=1063369224]
-position = Vector2(976.99994, 433)
-scale = Vector2(1.1406251, 0.875)
-texture_normal = ExtResource("2_4ntmi")
+[node name="JumpButton" type="TouchScreenButton" parent="UI" unique_id=1733196672]
+position = Vector2(964, 433)
+scale = Vector2(4, 4)
+texture_normal = ExtResource("5_vtle1")
 action = "ui_accept"
